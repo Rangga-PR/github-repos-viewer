@@ -1,0 +1,27 @@
+@import "../../styles/var";
+
+.topbar__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $black;
+  height: 56px;
+  width: 100%;
+}
+
+.topbar__content {
+  width: $big-screen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.topbar__icon {
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  background: $white;
+  border-radius: 90%;
+  margin-right: 24px;
+}

@@ -3,11 +3,14 @@ import "./styles/global.scss";
 import App from "./App";
 import React from "react";
 import ReactDOM from "react-dom";
+import { ReposProvider } from "./context/repos";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ReposProvider>
+      <App />
+    </ReposProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
