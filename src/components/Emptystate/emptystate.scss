@@ -1,0 +1,25 @@
+@import "../../styles/var";
+
+.emptystate__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 56px);
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (min-width: $big-screen) {
+    flex-direction: row;
+  }
+}
+
+.emptystate__icon {
+  width: 72px;
+  height: 72px;
+}
+
+.emptystate__caption {
+  font-size: 16px;
+  margin-top: 24px;
+  font-weight: bolder;
+}
