@@ -20,15 +20,15 @@ const Search = () => {
   const getRepos = () => {
     dispatch({ type: GET_REPOS });
     fire()
-      .then((res: any) =>
-        dispatch({ type: GET_REPOS_SUCCESS, data: res, page: 1 })
-      )
-      .catch((err) =>
+      .then((res: any) => {
+        dispatch({ type: GET_REPOS_SUCCESS, data: res, page: 1 });
+      })
+      .catch((err) => {
         dispatch({
           type: GET_REPOS_FAILED,
-          error: err?.response?.data?.message || err?.message,
-        })
-      );
+          error: err?.message,
+        });
+      });
   };
 
   const handleEnter = (e: any) => {
@@ -41,6 +41,7 @@ const Search = () => {
       placeholder="Search username..."
       onChange={(e) => setQuery(e.target.value)}
       onKeyPress={handleEnter}
+      data-testid="searchbar"
     />
   );
 };
