@@ -16,7 +16,7 @@ type RepocardPropsType = {
 
 const Repocard = ({ data }: RepocardPropsType) => {
   return (
-    <div className="repocard__container">
+    <div className="repocard__container" data-testid="repo card">
       <a className="repocard__name" href={data?.html_url}>
         {data?.name}
       </a>
