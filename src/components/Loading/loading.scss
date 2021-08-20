@@ -1,0 +1,33 @@
+@import "../../styles/var";
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 56px);
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (min-width: $big-screen) {
+    flex-direction: row;
+  }
+}
+
+.loading__spinner {
+  border: 0.3rem solid $gray;
+  border-top: 0.3rem solid $black;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
